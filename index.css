@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #212020;
+     /* Ensure padding and margin are included in width/height calculations */
+}
+.navbar {
+    
+    height: 80px;
+    background-color: #0f1111;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px ;
+    /* justify-content: space-evenly; */
+}
+.logo{
+    margin-left: 0px;
+}
+
+.nav {
+    margin-left: 125px;
+    justify-content: space-evenly;
+    background-color: #0f1111;
+    display: flex; /* Ensures the nav items are displayed side by side */
+    gap: 90px;
+    transition: transform 0.3s ease; /* Adds spacing between the nav items */
+}
+.nav p{
+    background-color: #0f1111;
+}
+.nav p:hover {
+    transform: scale(1.25); /* Slight zoom effect */
+}
+.logo{
+    background-color: #0f1111;
+}
+.nav div {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 480px;  /* Fixed height */
+    overflow: hidden; /* Hide overflow if image exceeds the container */
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;  /* Allows horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: smooth;
+}
+
+.slider img {
+    height: 480px; /* Fixed height */
+    /* width: 100%; Make the image width fill the full width of the screen */
+    /* aspect-ratio: 16/9; */
+    /* object-fit:contain; */
+    flex: 1 0 100%; /* Ensures the image covers the entire container area without distortion */
+    scroll-snap-align: start; 
+    background-size: cover;/* Ensures images snap into place when scrolling */
+}
+
+/* Hide the scrollbar */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Optional: Smooth scrolling for touch devices */
+.slider {
+    -webkit-overflow-scrolling: touch;
+}
+.selec {
+    margin-top: 10px;
+}
+
+.featured-heading {
+    font-size: 28px;
+    color: white;
+    /* margin-bottom: 20px; */
+    font-weight: bold;
+    text-align: left; /* Align heading to the left */
+    width: 100%; /* Make the title span across the full width */
+    padding-left: 20px;
+    background-color: #0f1111; /* Add padding for better spacing */
+}
+
+/* Featured Movies Box */
+.fmovies {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure boxes are on a single row */
+    gap: 20px; /* Space between boxes */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    background-color: #141414;
+    padding: 10px 0;
+}
+html, body {
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+}
+
+.fmovies::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+.fmovies .box:first-child {
+    margin-left: 20px; /* Same space as the gap between the boxes */
+}
+/* Add margin-right to the last box */
+.fmovies .box:last-child {
+    margin-right: 20px; /* Same space as the gap between the boxes */
+}
+
+.box {
+    
+    flex: 0 0 auto; /* Prevent box from shrinking */
+    width: 150px; /* Fixed width for each box */
+    height: 250px; /* Fixed height for the box */
+    position: relative;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.boximg {
+    height: 100%; /* Image takes up 70% of the box */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.boxcont {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30%; /* Title section takes up remaining 30% */
+}
+
+/* .boxcont h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Text shadow for contrast */
+} */
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+    .box {
+        width: 120px; /* Slightly smaller on medium screens */
+        height: 220px; /* Adjust box size */
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 100px; /* Even smaller on smaller screens */
+        height: 200px; /* Adjust height */
+    }
+}
+
+@media (max-width: 480px) {
+    .fmovies {
+        justify-content: space-evenly;
+        flex-wrap: wrap; /* Allow wrapping on mobile */
+        /* justify-content: center; Center items */
+    }
+
+    .box {
+        width: 150px; /* Larger size on mobile */
+        height: 250px; /* Taller boxes */
+    }
+}
+.foot-panel1
+{
+    background-color: #212020;
+    height:240px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:10px;
+}
+ul{
+    margin-top: 25px;
+}
+ul a{
+    display:block;
+    margin-top:15px;
+}
+.foot-panel2
+{
+    background-color: #212020;
+    height: 80px;
+    border-top: 1px solid black;
+    display:flex;
+    align-items: center;
+}
+i{
+    margin-left:30px;
+}
